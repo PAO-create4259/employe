@@ -61,10 +61,10 @@
             -from_date
             -to_date
         methode:table salaries;titles
-    (4221)-formulaire de recherche 
+    (4221)-[ok]formulaire de recherche 
     SELECT * FROM etudiants
 LIMIT 20, 10;
-(4221)-- saute les 20 premiers et affiche les 10 suivants
-(4221)-creer un lien vers les 20 suivants
-(4221)-creer un lien vers les 20 precedents
+(4221)-[ok]- saute les 20 premiers et affiche les 10 suivants
+(4221)-[ok]creer un lien vers les 20 suivants
+(4221)-[ok]creer un lien vers les 20 precedents
    
