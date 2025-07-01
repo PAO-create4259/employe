@@ -67,4 +67,5 @@ LIMIT 20, 10;
 (4221)-[ok]- saute les 20 premiers et affiche les 10 suivants
 (4221)-[ok]creer un lien vers les 20 suivants
 (4221)-[ok]creer un lien vers les 20 precedents
+ATAOVY NY FONCTION 
    
