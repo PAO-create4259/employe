@@ -111,7 +111,7 @@
         </table>
     </div>
 
-    <a href="departements.php" class="btn btn-secondary">⬅ Retour</a>
+    <a href="employes.php" class="btn btn-secondary">⬅ Retour</a>
 </main>
 
 <footer class="bg-light text-center py-3">
