@@ -1,0 +1,70 @@
+[ok]. Télécharger les données ici https://github.com/datacharmer/test_db (download zip) Le fichier fait
+35Mo. Utiliser localsend pour donner aux autres étudiants.
+[ok]. Lire le fichier Readme pour installer.
+[ok].base sql 
+[ok] Voir l'image pour voir la structure de la base (images/employees.png) sudo /opt/lampp/bin/mysql -u root -p 
+
+-version1
+[ok](4259)-structure
+    -inc:connexion.php;fonction.php;logout.php
+    -index.php:chemin vers pages/index.php
+    -pages
+        -index.php(liste des departements)
+    -Uploads
+    -traitements
+
+[ok](4221)-connexion.php
+    fonction dbconnect()
+
+[ok]-(4259)logout.php 
+    session_start();
+    session_destroy();
+
+[ok]-(4259)index.php
+    <?php
+    header('Location: pages/index.php');
+    ?>
+-[ok](4259)(4221) pages/index.php
+(la liste des départements + colonne manager en cours)
+    [ok](4259)-requete sql en php
+    [ok](4259)-semantique
+        -header
+        -main/body
+        -footer
+        (4259)-boostrap
+    [ok](4221)-lien vers liste des employes de chaque departement (voir)
+
+-[ok](4221)employes.php
+    -[ok]traitement_employes.php
+
+-[ok](4221)fonction.php
+   [ok] -function get_department_manager() pour afficher tous les employes et avec ceux d en cours
+   [ok] -function get_employe_department($dept_no) pour lister les emloyes de chaque departement
+
+[ok]-version2
+    [ok](4259)-employees.php
+        -ajouter un lien vers fiche.php
+        -redirige vers traitement_fiche.php
+    [ok](4259)-traitement_fiche.php
+    Lorsqu'on clique sur un employé, on doit afficher la fiche de l'employé
+        -fonction.php :fonction get_fiche_employe()
+    [ok](4259)-fiche.php
+     [ok]-creer la page fiche.php
+        -numero;
+        -date de naissance
+        -nom
+        -prenom
+        -genre
+        -date debut d emploi
+        -tableau:historique de salaire
+            -salary
+            -from_date
+            -to_date
+        methode:table salaries;titles
+    (4221)-formulaire de recherche 
+    SELECT * FROM etudiants
+LIMIT 20, 10;
+(4221)-- saute les 20 premiers et affiche les 10 suivants
+(4221)-creer un lien vers les 20 suivants
+(4221)-creer un lien vers les 20 precedents
+   
