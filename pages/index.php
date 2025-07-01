@@ -29,6 +29,8 @@ $result= get_department_manager();
                 <th>Nom du departement</th>
                 <th>Manager actuel</th>
                 <th>Voir employes</th>
+                <th>Nombre employes</th>
+                
             </tr>
         </thead>
         <tbody>

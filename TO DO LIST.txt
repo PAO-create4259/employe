@@ -69,7 +69,7 @@ LIMIT 20, 10;
 (4221)-[ok]creer un lien vers les 20 precedents
 
 -version3 
-    -creer un table sql
+    [OK]-creer un table sql
     -creer un view qui relie le table employes a celui de departements 
     -select count(*) du view(fonction get_nombre_employes)
 
