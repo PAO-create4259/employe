@@ -3,10 +3,12 @@
 function get_department_manager(){
     $sql = "
     SELECT d.dept_no, d.dept_name,
-           CONCAT(e.first_name, ' ', e.last_name) AS manager_name
+           CONCAT(e.first_name, ' ', e.last_name) AS manager_name,
+           dm.to_date
     FROM departments d
     JOIN dept_manager dm ON d.dept_no = dm.dept_no
-    JOIN employees e ON dm.emp_no = e.emp_no";
+    JOIN employees e ON dm.emp_no = e.emp_no
+    WHERE dm.to_date ='9999-01-01'";
     $result = mysqli_query(dbconnect(),$sql);
     return $result;
 }
