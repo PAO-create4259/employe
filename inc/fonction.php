@@ -1,5 +1,6 @@
 <?php
     require("connexion.php");
+    //changement
 function get_department_manager(){
     $sql = "
     SELECT d.dept_no, d.dept_name,
