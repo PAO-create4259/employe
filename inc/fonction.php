@@ -5,7 +5,12 @@ function get_department_manager(){
     $sql = "
     SELECT d.dept_no, d.dept_name,
            CONCAT(e.first_name, ' ', e.last_name) AS manager_name,
-           dm.to_date
+           dm.to_date,
+           (
+                   SELECT COUNT(*) 
+                   FROM dept_emp de
+                   WHERE de.dept_no = d.dept_no
+               ) AS employee_count
     FROM departments d
     JOIN dept_manager dm ON d.dept_no = dm.dept_no
     JOIN employees e ON dm.emp_no = e.emp_no
@@ -13,6 +18,7 @@ function get_department_manager(){
     $result = mysqli_query(dbconnect(),$sql);
     return $result;
 }
+
 
 function get_employe_department($dept_no){
     $sql = "

@@ -42,6 +42,7 @@ $result= get_department_manager();
                     <td>
                         <a class="btn btn-primary btn-sm" href="../traitements/traitement_employes.php?dept_no=<?= $row['dept_no']?>">Voir</a>
                     </td>
+                      <td><?= htmlspecialchars($row['employee_count']) ?></td>
                 </tr>
             <?php endwhile; ?>
         </tbody>

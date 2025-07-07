@@ -73,7 +73,7 @@ LIMIT 20, 10;
     -creer un view qui relie le table employes a celui de departements 
     -select count(*) du view(fonction get_nombre_employes)
 
--index.php
+[ok]-index.php
     -ajouter la colonne "nombre_employes"
 
 -affiche.php
