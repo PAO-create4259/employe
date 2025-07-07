@@ -21,3 +21,5 @@ on e.emp_no= de.emp_no
 join departments d
 on de.dept_no=d.dept_no
 group by d.dept_no;
+
+

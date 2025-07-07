@@ -35,7 +35,21 @@
                 'to_date' => $row['title_to']
             ];
         }
-    }
+        // ✅ Calcul du titre le plus long
+      $longest_title = null;
+      $longest_duration = -1;
+      foreach ($titres as $titre) {
+        $from = new DateTime($titre['from_date']);
+        $to = new DateTime($titre['to_date']);
+        $interval = $from->diff($to);
+        $days = (int)$interval->format('%a');
+
+        if ($days > $longest_duration) {
+            $longest_duration = $days;
+            $longest_title = $titre['title'];
+        }
+    
+    }}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -59,8 +73,9 @@
     <div class="card mb-4">
         <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($info['first_name'] . ' ' . $info['last_name']) ?></h5>
-            <p><strong>Sexe :</strong> <?= htmlspecialchars($info['gender']) ?></p>
-            <p><strong>Date d'embauche :</strong> <?= htmlspecialchars($info['hire_date']) ?></p>
+            <p>Sexe : <?= htmlspecialchars($info['gender']) ?></p>
+            <p>Date d'embauche : <?= htmlspecialchars($info['hire_date']) ?></p>
+            <p>Emploi le plus long:<?= htmlspecialchars($longest_title) ?></p>
         </div>
     </div>
     <?php else: ?>
@@ -120,4 +135,3 @@
 
 </body>
 </html>
-
