@@ -46,7 +46,7 @@
 
         if ($days > $longest_duration) {
             $longest_duration = $days;
-            $longest_title = $titre['title'];
+            $emploi_long = $titre['title'];
         }
     
     }}
@@ -75,7 +75,7 @@
             <h5 class="card-title"><?= htmlspecialchars($info['first_name'] . ' ' . $info['last_name']) ?></h5>
             <p>Sexe : <?= htmlspecialchars($info['gender']) ?></p>
             <p>Date d'embauche : <?= htmlspecialchars($info['hire_date']) ?></p>
-            <p>Emploi le plus long:<?= htmlspecialchars($longest_title) ?></p>
+            <p>Emploi le plus long:  <?= htmlspecialchars($emploi_long) ?></p>
         </div>
     </div>
     <?php else: ?>

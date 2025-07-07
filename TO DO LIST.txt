@@ -81,6 +81,7 @@ LIMIT 20, 10;
     -creer un view qui relie la table employes a celui de salaries
     -fonction select count(*) et fonction salaire_moyen()
 
--fiche.php
+[ok]-fiche.php
     -dans la fiche de l'employe, ajouter l'emploi le plus long(durer)
 
+-version4
