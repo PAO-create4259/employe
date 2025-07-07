@@ -14,7 +14,8 @@
                 'first_name' => $row['first_name'],
                 'last_name' => $row['last_name'],
                 'gender' => $row['gender'],
-                'hire_date' => $row['hire_date']
+                'hire_date' => $row['hire_date'],
+                'dept_no' => $row['current_dept_no']
             ];
         }
 
@@ -73,9 +74,13 @@
     <div class="card mb-4">
         <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($info['first_name'] . ' ' . $info['last_name']) ?></h5>
+             <p>numero_deparetement: <?= htmlspecialchars($info['dept_no']) ?></p>
             <p>Sexe : <?= htmlspecialchars($info['gender']) ?></p>
             <p>Date d'embauche : <?= htmlspecialchars($info['hire_date']) ?></p>
             <p>Emploi le plus long:  <?= htmlspecialchars($emploi_long) ?></p>
+            <a class="btn btn-warning mt-2" href="changement_departement.php?emp_no=<?= urlencode($emp_no) ?>">
+            Changer de departement
+            </a>
         </div>
     </div>
     <?php else: ?>

@@ -41,10 +41,12 @@ function get_fiche_employe($emp_no){
     s.to_date AS salary_to,
     t.title,
     t.from_date AS title_from,
-    t.to_date AS title_to
+    t.to_date AS title_to,
+     de.dept_no AS current_dept_no
 FROM employees e
 LEFT JOIN salaries s ON e.emp_no = s.emp_no
 LEFT JOIN titles t ON e.emp_no = t.emp_no
+ LEFT JOIN dept_emp de ON e.emp_no = de.emp_no 
 WHERE e.emp_no = $emp_no AND s.emp_no = $emp_no
 ORDER BY s.from_date DESC, t.from_date DESC";
 $result = mysqli_query(dbconnect(), $sql);
